@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.parent {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 15px;
+  }
+  .price {
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .title {
+    margin: 10px 0;
+  }
+  .button{
+    width: 120px;
+    padding: 10px;
+    border: none;
+    background: #55a3f0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.home{
+   display: flex;
+   justify-content: left;
+   margin-top: 50px;
+}

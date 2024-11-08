@@ -1,0 +1,113 @@
+.parent {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+.inputParent {
+  width: 70%;
+}
+.parent p {
+  font-weight: 200;
+  margin-right: 10px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.parent span {
+  display: block;
+  font-weight: 200;
+  font-size: 10px;
+  margin-right: 10px;
+  margin-top: -5px;
+}
+.inputParent input {
+  width: 100%;
+  background: #fff;
+  padding: 18px;
+  border: none;
+  border: 1px solid #f2f2f2;
+  border-left: none;
+  font-weight: 200;
+  color: rgb(154, 147, 147);
+  border-right-color: #fff;
+}
+.inputParent input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.search {
+  margin-top: 15px;
+  margin-right: 20px;
+  font-size: 25px;
+  color: rgb(154, 147, 147);
+}
+.searchParent {
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  border-radius: 0px 10px 10px 0px;
+  border-left-color: #fff;
+  cursor: pointer;
+}
+.searchLeft {
+  padding-left: 20px;
+  background-color: #fff;
+  display: flex;
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid #f2f2f2;
+}
+.user {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.userParent {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #f7f8f8;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+.manage {
+  display: flex;
+}
+.manage h4 {
+  font-weight: 200;
+  margin-right: 5px;
+}
+.manage svg {
+  width: 25px;
+  height: 25px;
+}
+.manageParent {
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.manageParent div button {
+  width: 120px;
+  padding: 10px;
+  border: none;
+  background: #55a3f0;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .inputParent{
+    width: 100%;
+  }
+  .parent{
+    display: flex;
+    flex-direction: column;
+  }
+  .searchParent{
+    display: none;
+  }
+  .searchLeft{
+    padding: 10px;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,25 @@
+.parent{
+    width: 86%;
+    height: 70px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+.parent p{
+    margin-left: 20px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(173, 168, 168);
+    cursor: pointer;
+    background-color: rgba(169, 172, 175, 0.128);
+}
+.focus{
+    color: #817b7b;
+}
