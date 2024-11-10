@@ -1,36 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAllProducts } from "../src/services/queries";
 import styles from "./HomePage.module.css";
-import { TbShoppingBagCheck } from "react-icons/tb";
-import { TfiLayoutListThumbAlt } from "react-icons/tfi";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import { useCart } from "../src/context/CartContext";
-import { chechItemsquantity } from "../src/helper/helper";
-import { MdOutlineDelete } from "react-icons/md";
 import HomeProducts from "../src/components/HomeProducts";
+import { getCookie } from "../src/configs/cookie";
 
 function HomePage() {
+  useEffect(() => {
+    const token = getCookie();
+    console.log(token);
+    setToken(token);
+  }, []);
+
+  const [token, setToken] = useState(null);
   const { data } = useAllProducts();
   const router = useRouter();
-  
+  // if (!token) router.push("/");
   return (
     <>
       <div className={styles.admin}>
         <button
           className={styles.button}
-          onClick={() => router.push("/AdminPage")}
+          onClick={() => (token ? router.push("/AdminPage") : router.push("/"))}
         >
           پنل ادمین
         </button>
-        <button className={styles.button}>حساب کاربری</button>
+        <button
+          className={styles.button}
+          onClick={() => (token ? router.push("/UserPage") : router.push("/"))}
+        >
+          حساب کاربری
+        </button>
       </div>
 
       <div className={styles.container}>
         {data?.data.data.map((item) => (
-       
-        <HomeProducts data={item}/>
-        
+          <HomeProducts data={item} />
         ))}
       </div>
     </>

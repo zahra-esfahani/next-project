@@ -21,9 +21,9 @@ const reducer = (state, action) => {
       const newSelectedItems = state.selectedItems.filter(
         (item) => item.id !== action.payload.id
       );
-      state.selectedItems = [...newSelectedItems];
       return {
         ...state,
+       selectedItems : [...newSelectedItems],
         ...sumTotalAndItems(newSelectedItems),
       };
     case "INCREASE":

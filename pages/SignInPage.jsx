@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./SignInPage.module.css";
 import { useSignIn } from "./src/services/mutaions"
 import { useRouter } from "next/router";
+import { Toaster } from "react-hot-toast";
 
 function SignInPage() {
   const [userSign, setUserSign] = useState({
@@ -78,6 +79,7 @@ function SignInPage() {
         <button onClick={clickHandler}>ثبت نام</button>
         <p onClick={() => router.push("/")}>حساب کاربری دارید؟</p>
       </div>
+      <Toaster/>
     </>
   );
 }

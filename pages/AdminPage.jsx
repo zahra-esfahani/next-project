@@ -1,15 +1,28 @@
-import React, { useState } from "react";
-import styles from "./AdminPage.module.css"
+import React, { useEffect, useState } from "react";
+import styles from "./AdminPage.module.css";
 import { CiSearch } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import ProductsList from "./src/components/ProductsList";
 import { useModal } from "./src/context/ModalProvider";
 import Pagination from "./src/components/Pagination";
+import { getCookie } from "./src/configs/cookie";
+import { useRouter } from "next/router";
 
 function AdminPage() {
+  useEffect(() => {
+    const token = getCookie();
+    console.log(token);
+    setToken(token);
+  }, []);
+
+  const [token, setToken] = useState(null);
   const { setAction, setTitle, setIsOpend } = useModal();
   const [page, SetPage] = useState(1);
   const [search, setSerach] = useState("");
+  const router = useRouter();
+
+  // if (!token) router.push("/");
+  
   const clickHandler = () => {
     setTitle("ایجاد محصول جدید");
     setAction("ایجاد");
@@ -114,9 +127,9 @@ function AdminPage() {
         </div>
       </div>
       <div>
-        <ProductsList page={page } search={search} />
+        <ProductsList page={page} search={search} />
       </div>
-      <Pagination SetPage={SetPage} page={page}/>
+      <Pagination SetPage={SetPage} page={page} />
     </>
   );
 }

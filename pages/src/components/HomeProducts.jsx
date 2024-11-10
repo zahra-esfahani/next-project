@@ -9,7 +9,9 @@ import { MdOutlineDelete } from "react-icons/md";
 
 function HomeProducts({ data }) {
   const [state, dispatch] = useCart();
+
   const quantity = chechItemsquantity(state, data.id);
+  
   const clickHandler = (type) => {
     dispatch({ type, payload: data });
   };

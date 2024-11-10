@@ -5,6 +5,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useProducts } from "../services/queries";
 import EditAndCreateModal from "../components/EditAndCreateModal";
 import DeleteModal from "../components/DeleteModal";
+import toast, { Toaster } from "react-hot-toast";
 
 function Modal({
   isOpend,
@@ -77,6 +78,7 @@ function Modal({
           Delete={Delete}
         />
       )}
+      <Toaster/>
     </>
   );
 }

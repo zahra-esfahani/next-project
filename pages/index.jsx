@@ -3,6 +3,7 @@ import styles from "./SignInPage.module.css";
 import {  setcookie } from "./src/configs/cookie";
 import { useLogIn } from "./src/services/mutaions";
 import { useRouter } from "next/router";
+import { Toaster } from "react-hot-toast";
 
 function LogInPage() {
   const [user, setUser] = useState({
@@ -33,6 +34,7 @@ function LogInPage() {
   };
 
   return (
+    <>
     <div className={styles.parent}>
       <svg
         width="55"
@@ -66,7 +68,10 @@ function LogInPage() {
       <button onClick={clickHandler}>ورود</button>
       <p onClick={() => router.push("/SignInPage")}>ایجاد حساب کاربری!</p>
     </div>
+    <Toaster/>
+    </>
   );
 }
 
 export default LogInPage;
+

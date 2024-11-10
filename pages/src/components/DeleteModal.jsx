@@ -4,9 +4,9 @@ import styles from "../context/Modal.module.css";
 import { useDeleteProduct } from "../services/mutaions";
 import { useQueryClient } from "@tanstack/react-query";
 import { useProducts } from "../services/queries";
+import { Toaster } from "react-hot-toast";
 
 function DeleteModal({ id }) {
-  
   const { setDelete } = useModal();
   const { mutate } = useDeleteProduct(id);
   const { queryKey } = useProducts();
@@ -205,10 +205,7 @@ function DeleteModal({ id }) {
           <h4>آیا از حذف این محصول مطمئن هستید؟</h4>
 
           <div className={styles.buttons}>
-            <button
-              onClick={clickHandler}
-              style={{ backgroundColor: "red" }}
-            >
+            <button onClick={clickHandler} style={{ backgroundColor: "red" }}>
               حذف
             </button>
             <button onClick={() => setDelete(false)}>انصراف</button>

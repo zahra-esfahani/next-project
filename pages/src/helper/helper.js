@@ -11,12 +11,12 @@ const chechItemsquantity=(state , id)=>{
     
     }
     const sumTotalAndItems = (product) => {
-        const counterItems = product.reduce((acc, curr) => {
+        const itemsCounter = product.reduce((acc, curr) => {
           return acc + curr.quantity;
         }, 0);
-        const totalItems = product.reduce((acc, curr) => {
+        const total = product.reduce((acc, curr) => {
           return (acc + curr.price * curr.quantity);
         }, 0);
-        return {counterItems , totalItems}
+        return {itemsCounter , total}
       };
     export{chechItemsquantity , sumTotalAndItems}
