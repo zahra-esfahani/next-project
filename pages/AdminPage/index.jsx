@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import styles from "./AdminPage.module.css";
 import { CiSearch } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
-import ProductsList from "./src/components/ProductsList";
-import { useModal } from "./src/context/ModalProvider";
-import Pagination from "./src/components/Pagination";
-import { getCookie } from "./src/configs/cookie";
+import ProductsList from "../src/components/ProductsList";
+import { useModal } from "../src/context/ModalProvider";
+import Pagination from "../src/components/Pagination";
+import { getCookie } from "../src/configs/cookie";
 import { useRouter } from "next/router";
 
 function AdminPage() {

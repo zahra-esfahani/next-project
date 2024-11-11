@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SignInPage.module.css";
+import styles from "./SignInPage/SignInPage.module.css";
 import {  setcookie } from "./src/configs/cookie";
 import { useLogIn } from "./src/services/mutaions";
 import { useRouter } from "next/router";

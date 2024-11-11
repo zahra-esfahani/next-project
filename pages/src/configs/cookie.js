@@ -1,6 +1,6 @@
 const setcookie=(token)=>{
     document.cookie = `Token=${token}; max-age=${
-          60 * 60
+      60*60
       }`;
 };
 

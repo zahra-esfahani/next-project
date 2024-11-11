@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SignInPage.module.css";
-import { useSignIn } from "./src/services/mutaions"
+import { useSignIn } from "../src/services/mutaions"
 import { useRouter } from "next/router";
 import { Toaster } from "react-hot-toast";
 
